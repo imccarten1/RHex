@@ -1,10 +1,10 @@
 # A test that a the dead cell analysis player correctly detects dead cells.
 
 
-from gtpinterface2 import gtpinterface2
+from gtpinterface2 import GTPInterface2
 
-basic = gtpinterface2("basic")
-improved = gtpinterface2("dca")
+basic = GTPInterface2("basic")
+improved = GTPInterface2("dca")
 black = basic
 white = improved
 score1 = 0
@@ -22,5 +22,6 @@ improved.gtp_play(["b", "b4"])
 improved.gtp_play(["b", "c4"])
 improved.gtp_play(["b", "d3"])
 print(improved.gtp_genmove("")[1])
+print(improved.gtp_genmove("w")[1])
 print(improved.gtp_show("")[1])
 
